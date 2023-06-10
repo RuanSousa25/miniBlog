@@ -64,6 +64,7 @@ input, textarea{
 .btn.btn-dark{
   background-color: #000;
   border-radius: 0;
+  transition: .3s ease-in-out;
 }
 .btn.btn-outline{
   background-color: transparent;

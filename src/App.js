@@ -26,6 +26,9 @@ import Login from './pages/Login/Login';
 import Register from './pages/Register/Register';
 import CreatePost from './pages/CreatePost/CreatePost';
 import Dashboard from './pages/Dashboard/Dashboard';
+import Search from './pages/Search/Search';
+import Post from './pages/Post/Post';
+import EditPost from './pages/editPost/EditPost';
 
 
 
@@ -60,6 +63,14 @@ function App() {
                 element={<About/>}
               />
               <Route 
+                path='/Search' 
+                element={<Search/>}
+              />
+              <Route 
+                path='/Posts/:id' 
+                element={<Post/>}
+              />
+              <Route 
                 path='/Login' 
                 element={!user?<Login/>:<Navigate to="/"/>}
               />
@@ -70,6 +81,10 @@ function App() {
               <Route 
                 path='/Posts/create' 
                 element={user?<CreatePost/>:<Navigate to="/Register"/>}
+              />
+              <Route 
+                path='/Posts/edit/:id' 
+                element={user?<EditPost/>:<Navigate to="/Register"/>}
               />
               <Route 
                 path='/Dashboard' 
